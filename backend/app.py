@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": ["http://localhost:3000,http://frontend:80, http://34.239.116.28:3000/"]}})
+CORS(app)
 # Database configuration
 # Use PostgreSQL if DATABASE_URL is provided, otherwise fall back to SQLite for local development
 database_url = os.environ.get('DATABASE_URL')
