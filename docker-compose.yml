@@ -27,11 +27,7 @@ services:
         condition: service_healthy
     volumes:
       - ./backend:/app
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
-      interval: 5s
-      timeout: 2s
-      retries: 10
+
 
   frontend:
     build: ./frontend
