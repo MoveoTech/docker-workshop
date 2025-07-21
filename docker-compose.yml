@@ -29,9 +29,9 @@ services:
       - ./backend:/app
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+      interval: 5s
+      timeout: 2s
+      retries: 3
 
   frontend:
     build: ./frontend
